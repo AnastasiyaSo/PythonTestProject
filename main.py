@@ -1,3 +1,6 @@
+"""Module providing a function printing python version."""
+
+
 def main():
     print("Hello world!")
 
