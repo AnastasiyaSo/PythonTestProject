@@ -2,6 +2,7 @@
 
 
 def main():
+    """Function printing "Hello world!"""
     print("Hello world!")
 
 
