@@ -3,9 +3,8 @@
 # 1. Заменить символ “#” на символ “/” в строке
 # 'www.my_site.com#about'
 site_url = 'www.my_site.com#about'
-site_url_2 = list(site_url)
-site_url_2[15] = '/'
-print(''.join(site_url_2))
+site_url_2 = site_url.replace('#', '/')
+print(site_url_2)
 
 # 2. Напишите программу, которая добавляет ‘ing’ к словам
 word = input('Enter a word: ')
