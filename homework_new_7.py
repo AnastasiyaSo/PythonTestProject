@@ -1,6 +1,7 @@
 """My Homework 7"""
 # Task #1
 import random
+
 rules = """Привет!\nПеред Вами игра \"Быки и коровы\".
 Правила игры:
 1. Компьютер загадывает 4-значное число с неповторяющимися цифрами.
@@ -23,9 +24,9 @@ while True:
         random_number = list(random.sample(range(0, 10), 4))
 
         user_number = [int(i)
-            for i in list(
-                    input("Введите 4-значное число "
-                          "с неповторяющимися цифрами: "))]
+                       for i in list(
+                input("Введите 4-значное число "
+                      "с неповторяющимися цифрами: "))]
         while user_number != random_number:
             count_of_cows = 0
             count_of_bulls = 0
