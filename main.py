@@ -1,6 +1,10 @@
-def main():
-    print("Hello world!")
+"""Module providing a function printing python version."""
 
 
-if __name__ == "__main__":
-    main()
+# def main():
+#     """Function printing "Hello world!"""
+#     print("Hello world!")
+#
+#
+# if __name__ == "__main__":
+#     main()
