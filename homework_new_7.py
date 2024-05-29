@@ -42,8 +42,8 @@ while True:
                   f"количество коров: {count_of_cows}")
 
             user_number = [int(i)
-                           for i in list(input("Введите 4-значное число "
-                                               "с неповторяющимися цифрами: "))]
+                           for i in list(input("Введите 4-значное число с "
+                                               "неповторяющимися цифрами: "))]
 
         print("Вы выиграли!")
         break
