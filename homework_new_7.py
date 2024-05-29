@@ -39,22 +39,21 @@ while True:
                 index_of_random_number += 1
 
             print(f"Количество быков: {count_of_bulls}, "
-                      f"количество коров: {count_of_cows}")
+                  f"количество коров: {count_of_cows}")
 
             user_number = [int(i)
-                               for i in list(
-                        input("Введите 4-значное число "
-                              "с неповторяющимися цифрами: "))]
+                           for i in list(input("Введите 4-значное число "
+                                               "с неповторяющимися цифрами: "))]
 
         print("Вы выиграли!")
         break
 
-    elif start_of_game == 'N':
+    if start_of_game == 'N':
         print("До новых встреч!")
         break
-    else:
-        print("Ошибка ввода!")
-        continue
+
+    print("Ошибка ввода!")
+    continue
 
 # Task #2
 
