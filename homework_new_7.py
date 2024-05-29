@@ -22,7 +22,6 @@ while True:
 
     if start_of_game == 'Y':
         random_number = list(random.sample(range(0, 10), 4))
-
         user_number = [int(i)
                        for i in list(
                 input("Введите 4-значное число "
@@ -32,22 +31,24 @@ while True:
             count_of_bulls = 0
             index_of_random_number = 0
             for i in user_number:
+
                 if i == random_number[index_of_random_number]:
                     count_of_bulls += 1
-                    index_of_random_number += 1
-                    if i in random_number:
-                        count_of_cows += 1
+                if i in random_number:
+                    count_of_cows += 1
+                index_of_random_number += 1
 
-                print(f"Количество быков: {count_of_bulls}, "
+            print(f"Количество быков: {count_of_bulls}, "
                       f"количество коров: {count_of_cows}")
 
-                user_number = [int(i)
+            user_number = [int(i)
                                for i in list(
                         input("Введите 4-значное число "
                               "с неповторяющимися цифрами: "))]
 
-            print("Вы выиграли!")
-            break
+        print("Вы выиграли!")
+        break
+
     elif start_of_game == 'N':
         print("До новых встреч!")
         break
@@ -70,8 +71,7 @@ while n != 0:
 # Task #3
 
 first_list = [6, 2, 3, 8]
-first_list.sort()
-min_value = first_list[0]
+min_value = min(first_list)
 max_value = max(first_list)
 second_list = list(range(min_value, max_value + 1))
 missing_list = list(set(second_list) - set(first_list))
