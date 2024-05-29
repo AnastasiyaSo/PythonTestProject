@@ -29,6 +29,7 @@ while True:
         while user_number != random_number:
             count_of_cows = 0
             count_of_bulls = 0
+            total_count_of_cows = 0
             index_of_random_number = 0
             for i in user_number:
 
@@ -36,10 +37,11 @@ while True:
                     count_of_bulls += 1
                 if i in random_number:
                     count_of_cows += 1
+                    total_count_of_cows = count_of_cows - count_of_bulls
                 index_of_random_number += 1
 
             print(f"Количество быков: {count_of_bulls}, "
-                  f"количество коров: {count_of_cows}")
+                  f"количество коров: {total_count_of_cows}")
 
             user_number = [int(i)
                            for i in list(input("Введите 4-значное число с "
