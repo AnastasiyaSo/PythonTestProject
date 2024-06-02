@@ -5,7 +5,6 @@
 
 def is_increasing_sequence(sequence):
     """Check an increasing sequence"""
-    sequence = tuple(sequence)
     for i in range(len(sequence)):
         temp_lst = list(sequence)
         temp_lst.pop(i)
@@ -15,11 +14,11 @@ def is_increasing_sequence(sequence):
     return False
 
 
-assert (is_increasing_sequence([1, 2, 3])) is True
-assert (is_increasing_sequence([1, 2, 1, 2])) is False
-assert (is_increasing_sequence([1, 3, 2, 1])) is False
-assert (is_increasing_sequence([1, 2, 3, 4, 5, 3, 5, 6])) is False
-assert (is_increasing_sequence([40, 50, 60, 10, 20, 30])) is False
+assert (is_increasing_sequence([1, 2, 3])), "True"
+assert not (is_increasing_sequence([1, 2, 1, 2])), "False"
+assert not (is_increasing_sequence([1, 3, 2, 1])), "False"
+assert not (is_increasing_sequence([1, 2, 3, 4, 5, 3, 5, 6])), "False"
+assert not (is_increasing_sequence([40, 50, 60, 10, 20, 30])), "False"
 
 
 # "Task #2"
@@ -61,5 +60,5 @@ def validate(test_numbers):
     return False
 
 
-assert validate(4561261212345467) is True
-assert validate(4561261212345464) is False
+assert validate(4561261212345467), "True"
+assert not validate(4561261212345464), "False"
