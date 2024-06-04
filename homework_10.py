@@ -92,6 +92,7 @@ def add_int(*arg):
     """Function that passes an argument"""
     return arg
 
+
 assert add_int(5, 6, 7) == 18
 
 
@@ -99,5 +100,6 @@ assert add_int(5, 6, 7) == 18
 def add_float(*arg):
     """Function that passes an argument"""
     return arg
+
 
 assert add_float(0.1, 0.2, 0.4) == 0.7000000000000001
