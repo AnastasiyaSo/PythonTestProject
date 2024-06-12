@@ -7,15 +7,8 @@ def typed(_type):
 
     def decorator(func):
         def inner(*arg):
-            func(*arg)
-            _str = ""
             converted_args = list(map(_type, arg))
-            if _type == str:
-                for i in converted_args:
-                    _str += str(i)
-                return _str
-            sum_numbers = sum(converted_args)
-            return sum_numbers
+            return func(*converted_args)
 
         return inner
 
@@ -23,9 +16,9 @@ def typed(_type):
 
 
 @typed(_type=str)
-def add_str(*arg):
+def add_str(a, b):
     """Function that passes an argument"""
-    return arg
+    return a + b
 
 
 assert add_str("3", 5) == "35"
@@ -34,18 +27,18 @@ assert add_str("a", "b") == "ab"
 
 
 @typed(_type=int)
-def add_int(*arg):
+def add_int(a, b, c):
     """Function that passes an argument"""
-    return arg
+    return a + b + c
 
 
 assert add_int(5, 6, 7) == 18
 
 
 @typed(_type=float)
-def add_float(*arg):
+def add_float(a, b, c):
     """Function that passes an argument"""
-    return arg
+    return a + b + c
 
 
 assert add_float(0.1, 0.2, 0.4) == 0.7000000000000001

@@ -8,8 +8,7 @@ def validate_arguments(func):
         for i in arg:
             if i <= 0:
                 raise ValueError("Value is not positive")
-        func(*arg)
-        return True
+        return func(*arg)
 
     return inner
 

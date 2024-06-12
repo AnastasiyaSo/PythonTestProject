@@ -8,7 +8,7 @@ def is_integer(func):
         result = func(a, b)
         if isinstance(result, (int, float)):
             return True
-        return f"{result} is not a number"
+        return False
 
     return inner
 
@@ -20,4 +20,4 @@ def new_func_2(a, b):
 
 
 assert new_func_2(1, 2), True
-assert new_func_2("ab", "cd") == "abcd is not a number"
+assert not new_func_2("ab", "cd"), False
