@@ -8,6 +8,7 @@ class Currency:
         self.name_currency = name_currency
         self.rate_to_byn = rate_to_byn
 
+
 eur = Currency("EUR", 3.50)
 usd = Currency("USD", 3.26)
 byn = Currency("BYN", 1)
