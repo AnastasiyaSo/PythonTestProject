@@ -21,7 +21,7 @@ class Bank:
         count_of_months = 0
         while count_of_months < deposit.deposit_time:
             deposit.deposit_amount += (deposit.deposit_amount
-                                       * deposit.percent / 100)
+                                       * deposit.percent / 100 / 12)
             count_of_months += 1
         print(f"Total amount: {round(deposit.deposit_amount, 2)} BYN")
         return True

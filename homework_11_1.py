@@ -11,9 +11,9 @@ class Book:
         self.author = author
         self.isbn = isbn
         self.is_reserved = False
-        self.reserved_by = ""
+        self.reserved_by = None
         self.is_taken = False
-        self.taken_by = ""
+        self.taken_by = None
 
 
 class Client:
