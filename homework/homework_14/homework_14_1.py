@@ -23,8 +23,8 @@ try:
                 group2 += 1
                 marks2 += int(mark)
         total_students = group1 + group2
-        marks1 = marks1 / group1
-        marks2 = marks2 / group2
+        marks1 = int(marks1 / group1)
+        marks2 = int(marks2 / group2)
         print(total_students, marks1, marks2)
 
     with open("students.txt", "a", encoding="utf-8") as students_file:
