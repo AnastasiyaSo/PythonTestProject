@@ -17,13 +17,13 @@ class Card:
 
 class CardsDeck:
     """Creating cards deck class"""
-    def __init__(self, deck_number_list, deck_mast_list):
+    def __init__(self):
         self.cards_list = []
-        for i in deck_mast_list:
-            for n in deck_number_list:
+        for i in Card.mast_list:
+            for n in Card.number_list:
                 self.cards_list.append(Card(i, n))
-        self.cards_list.append(Card("Joker", None))
-        self.cards_list.append(Card("Joker", None))
+        self.cards_list.append(Card("Joker", "Red"))
+        self.cards_list.append(Card("Joker", "Black"))
 
     def shuffle(self):
         """Shuffling cards deck"""
@@ -35,7 +35,7 @@ class CardsDeck:
         return self.cards_list[index - 1]
 
 
-deck = CardsDeck(Card.number_list, Card.mast_list)
+deck = CardsDeck()
 deck.shuffle()
 card_number = int(input("Выберите карту из колоды в 54 карты: "))
 card = deck.get(card_number)
