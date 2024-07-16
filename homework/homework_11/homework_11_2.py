@@ -10,8 +10,8 @@ class Deposit:
     def __init__(self, deposit_amount, deposit_time, percent):
         try:
             self.deposit_amount = Decimal(str(deposit_amount))
-        except InvalidOperation:
-            raise ValueError("Invalid deposit amount")
+        except InvalidOperation as exc:
+            raise ValueError("Invalid deposit amount") from exc
         if self.deposit_amount < 0:
             raise ValueError("Deposit amount cannot be negative")
         self.deposit_time = deposit_time
