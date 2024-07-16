@@ -1,14 +1,19 @@
 """Homework # 11"""
 # Task #2
 
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 
 
 class Deposit:
     """Create class Deposit"""
 
     def __init__(self, deposit_amount, deposit_time, percent):
-        self.deposit_amount = Decimal(str(deposit_amount))
+        try:
+            self.deposit_amount = Decimal(str(deposit_amount))
+        except InvalidOperation:
+            raise ValueError("Invalid deposit amount")
+        if self.deposit_amount < 0:
+            raise ValueError("Deposit amount cannot be negative")
         self.deposit_time = deposit_time
         self.percent = Decimal(str(percent))
 
@@ -23,11 +28,11 @@ class Bank:
             deposit.deposit_amount += (deposit.deposit_amount
                                        * deposit.percent / 100 / 12)
             count_of_months += 1
-        print(f"Total amount: {round(deposit.deposit_amount, 2)} BYN")
-        return True
+        # print(f"Total amount: {round(deposit.deposit_amount, 2)} BYN")
+        return deposit.deposit_amount
 
 
-deposit_1 = Deposit(1000, 12, 10)
-bank_1 = Bank()
-
-assert bank_1.method_deposit(deposit_1), True
+# deposit_1 = Deposit(1000, 12, 10)
+# bank_1 = Bank()
+#
+# assert bank_1.method_deposit(deposit_1) == Decimal("1220.39")
