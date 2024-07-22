@@ -32,7 +32,7 @@ class Client:
             print(f"\"{book.name_book}\" is reserved successfully")
             return True
         print(f"\"{book.name_book}\" is reserved by another client")
-        return True
+        return False
 
     def take_book(self, book):
         """Take book method"""

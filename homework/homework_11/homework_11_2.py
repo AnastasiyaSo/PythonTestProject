@@ -29,7 +29,7 @@ class Bank:
                                        * deposit.percent / 100 / 12)
             count_of_months += 1
         # print(f"Total amount: {round(deposit.deposit_amount, 2)} BYN")
-        return deposit.deposit_amount
+        return round(deposit.deposit_amount, 2)
 
 
 # deposit_1 = Deposit(1000, 12, 10)
