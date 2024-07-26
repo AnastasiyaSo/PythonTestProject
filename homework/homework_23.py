@@ -6,7 +6,8 @@
 # Click on the button: #submit
 
 # 1. Create a new contact:
-# Page https://thinking-tester-contact-list.herokuapp.com/contactList should be opened
+# Page https://thinking-tester-contact-list.herokuapp.com/contactList
+# should be opened
 # Click on the button: #add-contact
 # Enter First name (required): #firstName
 # Enter Last name (required): #lastName
@@ -21,7 +22,8 @@
 # Click on the button: #submit
 
 # 2. Edit the contact:
-# Page https://thinking-tester-contact-list.herokuapp.com/contactList should be opened
+# Page https://thinking-tester-contact-list.herokuapp.com/contactList
+# should be opened
 # Click on the row table: //tr[@class="contactTableBodyRow"][1]
 # Click on the button: #edit-contact
 # Change First name: #firstName
@@ -37,7 +39,8 @@
 # Click on the button: #submit
 
 # 3. Delete the contact:
-# Page https://thinking-tester-contact-list.herokuapp.com/contactList should be opened
+# Page https://thinking-tester-contact-list.herokuapp.com/contactList
+# should be opened
 # Click on the row table: //tr[@class="contactTableBodyRow"][1]
 # Click on the button: #delete
 # Press "Enter" on the keyboard
