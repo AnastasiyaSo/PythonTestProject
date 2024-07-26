@@ -1,4 +1,6 @@
 """Homework # 11"""
+
+
 # Task #1
 
 
@@ -80,21 +82,21 @@ class Client:
         return False
 
 
-# book_1 = Book("Harry Potter 1", "J. K. Rowling", 1)
-# book_2 = Book("Harry Potter 2", "J. K. Rowling", 2)
-# book_3 = Book("The Lord of the Ring 1", "J. R. R. Tolkien", 3)
-# book_4 = Book("The Lord of the Ring 2", "J. R. R. Tolkien", 4)
-#
-# client_1 = Client(1, "Ivan", "Ivanov")
-# client_2 = Client(2, "Vasya", "Petrov")
-# client_3 = Client(3, "Olia", "Pupkina")
-#
-#
-# assert client_1.take_book(book_1), True
-# assert client_2.take_book(book_1), True
-# assert client_2.reserve_book(book_1), True
-# assert not client_3.take_book(book_1), False
-# assert client_2.take_book(book_1), True
-# assert not client_3.return_book(book_1), False
-# assert not client_3.return_book(book_3), False
-# assert client_1.return_book(book_1), True
+if __name__ == "__main__":
+    book_1 = Book("Harry Potter 1", "J. K. Rowling", 1)
+    book_2 = Book("Harry Potter 2", "J. K. Rowling", 2)
+    book_3 = Book("The Lord of the Ring 1", "J. R. R. Tolkien", 3)
+    book_4 = Book("The Lord of the Ring 2", "J. R. R. Tolkien", 4)
+
+    client_1 = Client(1, "Ivan", "Ivanov")
+    client_2 = Client(2, "Vasya", "Petrov")
+    client_3 = Client(3, "Olia", "Pupkina")
+
+    assert client_1.take_book(book_1), True
+    assert client_2.take_book(book_1), True
+    assert client_2.reserve_book(book_1), True
+    assert not client_3.take_book(book_1), False
+    assert client_2.take_book(book_1), True
+    assert not client_3.return_book(book_1), False
+    assert not client_3.return_book(book_3), False
+    assert client_1.return_book(book_1), True

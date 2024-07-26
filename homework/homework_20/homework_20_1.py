@@ -1,15 +1,7 @@
 """Homework # 20.1"""
 import unittest
-import logging
+from homework import logger_module
 from homework.homework_11 import homework_11_1
-
-formatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(message)s')
-handler = logging.StreamHandler()
-handler.setFormatter(formatter)
-
-logger = logging.getLogger(__name__)
-logger.addHandler(handler)
-logger.setLevel(logging.INFO)
 
 
 class TestLibraryMethods(unittest.TestCase):
@@ -44,54 +36,74 @@ class TestLibraryMethods(unittest.TestCase):
     def test_verify_client_can_take_book(self):
         """Check that a client can take a book"""
         self.assertTrue(self.client_4.take_book(self.book_5))
-        logger.info("%s %s can take book: %s", self.client_4.first_name,
-                    self.client_4.last_name, self.book_5.name_book)
+        logger_module.logger.info("%s %s can take book: %s",
+                                  self.client_4.first_name,
+                                  self.client_4.last_name,
+                                  self.book_5.name_book)
 
     def test_verify_client_can_reserve_book(self):
         """Check that a client can reserve a book"""
         self.assertTrue(self.client_4.take_book(self.book_6))
-        logger.info("%s %s can take book: %s", self.client_4.first_name,
-                    self.client_4.last_name, self.book_6.name_book)
+        logger_module.logger.info("%s %s can take book: %s",
+                                  self.client_4.first_name,
+                                  self.client_4.last_name,
+                                  self.book_6.name_book)
         self.assertTrue(self.client_5.take_book(self.book_6))
-        logger.info("%s is read by another client. %s %s can reserve"
-                    " the book", self.book_6.name_book,
-                    self.client_5.first_name, self.client_5.last_name)
+        logger_module.logger.info("%s is read by another client. "
+                                  "%s %s can reserve the book",
+                                  self.book_6.name_book,
+                                  self.client_5.first_name,
+                                  self.client_5.last_name)
         self.assertTrue(self.client_5.reserve_book(self.book_6))
-        logger.info("%s is reserved successfully", self.book_6.name_book)
+        logger_module.logger.info("%s is reserved successfully",
+                                  self.book_6.name_book)
 
     def test_verify_client_can_not_take_and_reserve_book(self):
         """Check that a client can not take and reserve a book if it is taken
          and reserved another client"""
         self.assertTrue(self.client_4.take_book(self.book_7))
-        logger.info("%s %s can take book: %s", self.client_4.first_name,
-                    self.client_4.last_name, self.book_7.name_book)
+        logger_module.logger.info("%s %s can take book: %s",
+                                  self.client_4.first_name,
+                                  self.client_4.last_name,
+                                  self.book_7.name_book)
         self.assertTrue(self.client_5.reserve_book(self.book_7))
-        logger.info("%s is reserved successfully", self.book_7.name_book)
+        logger_module.logger.info("%s is reserved successfully",
+                                  self.book_7.name_book)
         self.assertFalse(self.client_6.take_book(self.book_7))
-        logger.info("%s is read by another client. %s %s can not reserve"
-                    " the book", self.book_7.name_book,
-                    self.client_6.first_name, self.client_6.last_name)
+        logger_module.logger.info("%s is read by another client. "
+                                  "%s %s can not reserve the book",
+                                  self.book_7.name_book,
+                                  self.client_6.first_name,
+                                  self.client_6.last_name)
 
     def test_verify_client_can_return_book(self):
         """Check that a client can return a book"""
         self.assertTrue(self.client_4.take_book(self.book_8))
-        logger.info("%s %s can take book: %s", self.client_4.first_name,
-                    self.client_4.last_name, self.book_8.name_book)
+        logger_module.logger.info("%s %s can take book: %s",
+                                  self.client_4.first_name,
+                                  self.client_4.last_name,
+                                  self.book_8.name_book)
         self.assertTrue(self.client_4.return_book(self.book_8))
-        logger.info("%s %s can return book: %s", self.client_4.first_name,
-                    self.client_4.last_name, self.book_8.name_book)
+        logger_module.logger.info("%s %s can return book: %s",
+                                  self.client_4.first_name,
+                                  self.client_4.last_name,
+                                  self.book_8.name_book)
 
     def test_verify_book_can_not_be_returned(self):
         """Check that a book can not be returned if it was not taken"""
         self.assertFalse(self.client_6.return_book(self.book_9))
-        logger.info("Book: %s is not taken", self.book_9.name_book)
+        logger_module.logger.info("Book: %s is not taken",
+                                  self.book_9.name_book)
 
     def test_verify_client_can_not_return_book_that_they_did_not_take(self):
         """Check that a client can not return a book that they did not take"""
         self.assertTrue(self.client_6.take_book(self.book_10))
-        logger.info("%s %s can take book: %s", self.client_6.first_name,
-                    self.client_6.last_name, self.book_10.name_book)
+        logger_module.logger.info("%s %s can take book: %s",
+                                  self.client_6.first_name,
+                                  self.client_6.last_name,
+                                  self.book_10.name_book)
         self.assertFalse(self.client_5.return_book(self.book_10))
-        logger.info("Book: %s is not taken by %s %s",
-                    self.book_8.name_book, self.client_5.first_name,
-                    self.client_5.last_name)
+        logger_module.logger.info("Book: %s is not taken by %s %s",
+                                  self.book_8.name_book,
+                                  self.client_5.first_name,
+                                  self.client_5.last_name)
