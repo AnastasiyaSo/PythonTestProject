@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+.pytest_cache
 *.py[cod]
 *$py.class
 
@@ -12,3 +13,5 @@ venv/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
+/report_21_1.html
+/report_21_2.html
