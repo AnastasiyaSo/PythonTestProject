@@ -32,7 +32,8 @@ class Bank:
         return deposit.deposit_amount
 
 
-# deposit_1 = Deposit(1000, 12, 10)
-# bank_1 = Bank()
-#
-# assert bank_1.method_deposit(deposit_1) == Decimal("1220.39")
+if __name__ == "__main__":
+    deposit_1 = Deposit(1000, 12, 10)
+    bank_1 = Bank()
+
+    assert bank_1.method_deposit(deposit_1) == Decimal("1220.39")
