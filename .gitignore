@@ -3,6 +3,8 @@ __pycache__/
 .pytest_cache
 *.py[cod]
 *$py.class
+report_21_2.html
+report_21_1.html
 
 # Environments
 venv/
