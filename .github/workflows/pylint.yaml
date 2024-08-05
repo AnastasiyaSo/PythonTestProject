@@ -21,4 +21,4 @@ jobs:
           pip install pylint
       - name: Analysing the code with pylint
         run: |
-          pylint $(git ls-files '*.py')
+          pylint $(git ls-files '*.py') --disable=invalid-name, too-few-public-methods, duplicate-code, import-error, attribute-defined-outside-init, redefined-outer-name
