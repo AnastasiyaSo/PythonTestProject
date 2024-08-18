@@ -12,12 +12,6 @@ token = ("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMD"
          "I6MTcyMzkyNDU5Nn0.1Eh6O7RUdpuZ98JarEyWM3psXJ5MnPon7KjW2Q7aGEY")
 
 base_url = "https://alexqa.netlify.app/.netlify/"
-endpoint_1 = "functions/createUser"
-endpoint_2 = "functions/getUser/"
-endpoint_3 = "functions/getUsers/"
-endpoint_4 = "functions/updateUser/"
-endpoint_5 = "functions/deleteUser/"
-endpoint_6 = "functions/checkUserStatus/"
 
 first_name = generate_string(3, 6)
 last_name = generate_string(4, 8)
