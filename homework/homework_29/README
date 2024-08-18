@@ -1,0 +1,42 @@
+# My Python App
+
+This is a simple Python Flask application that displays random cat GIFs. The application is containerized using Docker.
+
+## Prerequisites
+
+•  Docker installed on your machine
+
+
+## Getting Started
+
+Follow these instructions to build and run the Docker container for this project.
+
+### Build the Docker Image
+
+To build the Docker image, navigate to the project directory and run the following command:
+
+docker build -t my-python-app .
+
+This command will create a Docker image named my-python-app using the Dockerfile in the current directory.
+
+Run the Docker Container
+To run the Docker container, use the following command:
+
+docker run -p 8866:8866 my-python-app
+
+This command will start a container from the my-python-app image and map port 8866
+ of the container to port 8866 on your host machine.
+
+Access the Application
+Once the container is running, you can access the application in your web browser at:
+
+http://localhost:8866
+
+You should see a random cat GIF displayed on the page.
+
+Project Structure
+/templates
+index.html
+app.py
+Dockerfile
+requirements.txt
